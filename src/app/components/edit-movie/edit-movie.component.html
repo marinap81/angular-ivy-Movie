@@ -1,0 +1,17 @@
+<div *ngIf="isLoading === true">Loading....</div>
+
+<div *ngIf="isLoading === false">
+  <h1>Edit {{ movie.title }}</h1>
+  <label>Title: </label>
+  <input type="text" [(ngModel)]="movie.title" />
+
+  <br />
+
+  <label>Created By: </label>
+  <input type="text" [(ngModel)]="movie.createdBy" />
+
+  <br />
+
+  <button (click)="handleSaveClick()">Save</button>
+  <button (click)="handleDeleteClick()">Delete</button>
+</div>
